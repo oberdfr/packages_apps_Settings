@@ -57,8 +57,7 @@ public class UdfpsGesturePreferenceController extends BasePreferenceController {
             (!mFingerprintManager.isHardwareDetected() || !mFingerprintManager.hasEnrolledFingerprints())) {
             return UNSUPPORTED_ON_DEVICE;
         }
-        if (!mContext.getResources().getBoolean(
-                org.lineageos.platform.internal.R.bool.config_supportsScreenOffUdfps)) {
+        if (!mContext.getResources().getBoolean(R.bool.config_supportsScreenOffUdfps)) {
             return UNSUPPORTED_ON_DEVICE;
         }
         return AVAILABLE;
